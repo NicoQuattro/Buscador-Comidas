@@ -1,0 +1,91 @@
+.fondoImg{
+    background-image: url(../images/fondoBuscador.jpg);
+    background-position: center;
+    background-size: 2000px;
+    width: 100%;
+    height: 550px;
+
+}
+
+/* Bootstrap 4 text input with search icon */
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+.contenedorBuscador{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60vw;
+    max-width: 700px;
+}
+
+
+/* no me funciono la magia :( */
+
+#contenedorComidas{
+    margin-left: 15%;
+    margin-right: 15%;
+
+
+    display:grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%,20rem), 1fr));
+}
+#contenedorComidasPais{
+    margin-left: 15%;
+    margin-right: 15%;
+
+
+    display:grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%,20rem), 1fr));
+}
+
+
+.comidaBuscadaEstilo{
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.imagenComidaBuscada .contenedor {
+    width: 550px;
+    height: 350px; 
+}
+.imagenComidaBuscada .contenido {
+    height: 100%;
+    object-fit: cover; 
+}
+.tituloComidas{
+    text-align: center;
+    margin: 40px;
+    font-size: 25px;
+}
+.estiloDropdown{
+    margin-left: 40px;
+}
+
+li{
+    list-style-type: none;
+}
+.comidaAgregada button{
+    margin-left: 20px;
+    
+}
+.comidaAgregada p{
+    display: inline-block;
+}

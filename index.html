@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+    <!-- Font Awesome CSS -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+    
+</head>
+<body>
+
+
+<div class="fondoImg">
+    <div class="contenedorBuscador">
+        
+        <form class="input-group" id="buscador">
+            <input type="text" class="form-control" placeholder="ingresa ingredientes" id="formulario">
+            <div class="input-group-append">
+              <button class="btn btn-secondary disabled" type="button" id="boton">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+
+
+            <div class="dropdown estiloDropdown">
+              
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Comidas Favoritas
+
+                <span id="contador" class="position-absolute top-0 start-100 translate-middle badge rounded-circle bg-danger">
+                  0
+                </span>
+
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <ul id="contenedorComidaFav">
+
+                </ul>
+              </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div id="comidaBuscada">
+    <!-- Aca se muestran la comida buscada -->
+</div>
+
+<div id="contenedorComidasPais">
+    <!-- Aca se muestran las comidas -->
+</div>
+
+<h3 class="tituloComidas">Todas las Comidas</h3>
+<div id="contenedorComidas">
+    <!-- Aca se muestran las comidas -->
+</div>
+
+<button id="id"></button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
