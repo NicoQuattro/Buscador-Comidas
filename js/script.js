@@ -127,6 +127,7 @@ function agregarFavoritos(comida){
     let existFav = arrayFav.find(elemento => elemento.id === comida.id);
     if (existFav){
     }else{
+    //si no esta en favoritos entonces lo agrego
        arrayFav.push(comida);
        cantidadTot ++;
        localStorage.setItem("Contador", cantidadTot);
@@ -140,31 +141,10 @@ function agregarFavoritos(comida){
        container.classList.add('comidaAgregada');
         //este inner es para que agregue sin necesidad de refrescar la pagina//
        container.innerHTML=`
-                           <p>${comida.nombre}</p>
-                           <button id="${comida.nombre}" type="button" class="btn btn-primary badge rounded-circle">-</button>
-      `
+                           <p>${comida.nombre}</p> `
       idContendedor.appendChild(container);
-
-      document.getElementById(`${comida.nombre}`).addEventListener('click', () => eliminarFav(comida));
-
     }
 }
-
-/*function eliminarFav(comida){
-    console.log(`${comida.nombre}`)
-
-    console.log (arrayFav);
-    for(let i = 0; i<arrayFav.length ; i++){
-
-        if(arrayFav[i].nombre === `${comida.nombre}`){
-          arrayFav.splice(i, 1)
-        }
-        
-      }
-      console.log(arrayFav);
-}*/
-
-
 
 function cargarLocalStorage(){
     const idContendedor = document.getElementById("contenedorComidaFav");
@@ -175,19 +155,15 @@ function cargarLocalStorage(){
     let favoritosLocal = JSON.parse(localStorage.getItem("comidasFavoritas"));
 
     if(favoritosLocal){
-        //recorro el carrito
         for (let i = 0; i < favoritosLocal.length; i++) {
             arrayFav.push(new Comida(favoritosLocal[i].id, favoritosLocal[i].nombre))
             let container = document.createElement("li");
             container.classList.add('comidaAgregada')
             container.innerHTML=`
-                                <p>${favoritosLocal[i].nombre}</p>
-                                <button id="${favoritosLocal[i].nombre}" type="button" class="btn btn-primary badge rounded-circle">-</button>
-           `
-           idContendedor.appendChild(container);  
+                                <p>${favoritosLocal[i].nombre}</p>`
+           idContendedor.appendChild(container);
         }
     }
-
 }
 
 function agregarComidaDom(comida){
@@ -247,7 +223,7 @@ function mostrarComidaPaises(){
 let arrayComidasFavoritas = JSON.parse(localStorage.getItem("comidasFavoritas"));
 
 
-// esto hace que el dropdown no se cierre cuando haga click dentro de el
+// esto hace que el dropdown no se cierre cuando haga click dentro
 $('.dropdown-menu').on('click', function(event){
     event.stopPropagation();
 });
